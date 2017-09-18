@@ -18,11 +18,18 @@ public class A1Q5 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner in = new Scanner(System.in);
+        System.out.println("Please enter a number");
         int num = in.nextInt();
-        int i = num;
-        while (i == num){
+        
+        
+        for (int i =0; i<=num; i++){
+         for ( int m =0; m<=num; m++){
             System.out.print("*");
+          
         }
+            System.out.println("");
+        }
+           
 
     }
 }
