@@ -14,7 +14,7 @@ public class A2Q6 {
         if (n == 0 || n == 1) {
             return "" + n;
         }
-        //fding out if it is divisable by 2
+        
         //finding remainder
         int re = n % b;
 
@@ -28,24 +28,26 @@ public class A2Q6 {
             Math.ceil(n);
             //if the number has a remainder
             if (re == 10) {
-                return convert "A"+s;
+                System.out.println("A");
+                return convert(n / b);
             }else if (re == 11) {
-                return convert(n / b)
-              "b";
+                System.out.println("A");
+                return convert(n / b);
             }else if (re == 12) {
-                return convert(n / b)
-              "C";
+                System.out.println("A");
+                return convert(n / b);
             }else if (re == 13) {
-                return convert(n / b)
-              "D";
+                System.out.println("A");
+                return convert(n / b);
             }else if (re == 14) {
-                return convert(n / b)
-              "E";
+                System.out.println("A");
+                return convert(n / b);
             }else if (re == 15) {
-                return convert(n / b)
-              "F";
+                System.out.println("A");            
+                return convert(n / b);
             }else if (re == 16) {
-                return convert(n / b)"G";
+                System.out.println("A");
+                return convert(n / b);
             }
         }
 
