@@ -26,7 +26,7 @@ public class A1Q8 {
         double balance = in.nextDouble();
         double balance2 = balance+balance;
         while (balance != 1000000) {
-            balance = (r) * balance;
+            balance = (r)* balance;
              year = year+1;
            
             if (balance2 == (balance * 2)){
