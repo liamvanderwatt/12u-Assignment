@@ -15,14 +15,11 @@ public class A2Q3 {
     public int triangle(int n ) {
         
         // check if we are done
-        if (n ==0){ 
+        if (n == 0){ 
             return 0;
-        }
-        
-        int store = store+n;
+        }         
         //checking if we are done
-        System.out.println(store);
-        return triangle(n-1); 
+        return n + triangle(n-1); 
         
     }
     

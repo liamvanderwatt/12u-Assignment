@@ -11,50 +11,49 @@ package assignment2;
 public class A2Q6 {
 
     public String convert(int n, int b) {
-        if (n == 0 || n == 1) {
-            return "" + n;
+        //base case
+        if (n == 0) {
+            return "";
         }
-        
-        //finding remainder
-        int re = n % b;
-
-        if (re == 0) {
-            //rounding number up
-            Math.ceil(n);
-            return convert(n / b) + "0";
-
-        } else {
-            int s = (n / b);
-            Math.ceil(n);
-            //if the number has a remainder
-            if (re == 10) {
-                System.out.println("A");
-                return convert(n / b);
-            }else if (re == 11) {
-                System.out.println("A");
-                return convert(n / b);
-            }else if (re == 12) {
-                System.out.println("A");
-                return convert(n / b);
-            }else if (re == 13) {
-                System.out.println("A");
-                return convert(n / b);
-            }else if (re == 14) {
-                System.out.println("A");
-                return convert(n / b);
-            }else if (re == 15) {
-                System.out.println("A");            
-                return convert(n / b);
-            }else if (re == 16) {
-                System.out.println("A");
-                return convert(n / b);
-            }
+        //converting to letters 
+        String rem = toLetter(n % b);
+        int numnew = n / b;
+        return convert(numnew, b) + rem;
+    }
+    //converts num to letter
+    public String toLetter(int rem) {
+        String ans = "";
+        switch (rem) {
+            case 10:
+                ans = "A";
+                break;
+            case 11:
+                ans = "B";
+                break;
+            case 12:
+                ans = "C";
+                break;
+            case 13:
+                ans = "D";
+                break;
+            case 14:
+                ans = "E";
+                break;
+            case 15:
+                ans = "F";
+                break;
+            default:
+                ans = "" + rem;
         }
-
-
+        return ans;
     }
 
     public static void main(String[] args) {
         // TODO code application logic here
+        A2Q6 test = new A2Q6();
+       String con = test.convert(1000, 8);
+        System.out.println(con);
+        System.out.println(test.convert(1000, 16));
+        System.out.println(test.convert(1000, 2));
     }
 }
