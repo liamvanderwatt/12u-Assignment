@@ -23,7 +23,7 @@ public class Quiz1 {
         if (l == 0) {
             return word;
         } 
-            return l--,reverseString(word.c);
+            return reverseString(word);
        
         }
     
