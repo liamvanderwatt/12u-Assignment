@@ -17,25 +17,26 @@ public class A3Q1 {
     }
 
     public void selectionSort(int[] array) {
+
         //keep track of which array we are sorting
         for (int postion = 0; postion < array.length; postion++) {
+            int smallest = postion;
             //look through the rest looking for a smaller number
             for (int i = postion + 1; i < array.length; i++) {
                 //have we found the smallest number
-                int smallest = i;
-                if (array[i] < smallest) {
-                    //swap with smallest number numbers
-                    smallest = i;
-                }else{
-                    swap(array, i, smallest);
+                if (array[i] < array[postion] && array[i] < array[smallest]) {
+                    //changing the smallest number
+                    smallest = i;  
+                }                
             }
+            //swaping the smallest number to the correct spot 
+            swap(array, postion, smallest);
         }
-    }
     }
 
     public static void main(String[] args) {
         // TODO code application logic here
-         A3Q1 test = new A3Q1();
+        A3Q1 test = new A3Q1();
         int numbers[] = new int[10];
         for (int i = 0; i < numbers.length; i++) {
             //make random number
